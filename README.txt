@@ -14,3 +14,4 @@ Update - 30102017
 -Explored the use of 'NavigationPage'
 -Explored the use of 'TabbedPage'
 -Explored the use of 'CarouselPage'
+-Explored the many customization options available for the UI through XML.
