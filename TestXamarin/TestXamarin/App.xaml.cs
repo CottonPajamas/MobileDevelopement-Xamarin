@@ -79,7 +79,7 @@ namespace TestXamarin
             //        new GreetPage5(),
             //        new GreetPage7()
 
-            //        //NOTE: Ignore the 'Next' buttons for now as it will not work.
+            //        //NOTE: Ignore the 'Next' buttons for now as it will not work. Designed to only work for 'TabbedPage' for now.
             //    }
             //};
 
