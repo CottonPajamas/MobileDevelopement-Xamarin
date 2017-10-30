@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TestXamarin.PlusPart2LabelButtonAndEntry"
-             BackgroundColor="Black"
+             BackgroundColor="#2eb8b8"
              Title="FirstPage">
 
     <!--Please never forget to add this when adding anything without VerticalOptions and HorizontalOptions-->
@@ -14,14 +14,13 @@
     </ContentPage.Padding>
 
 
-    <StackLayout BackgroundColor="Black"
+    <StackLayout BackgroundColor="#2eb8b8"
                  Padding="60"
                   VerticalOptions="Center">
 
         <Label TextColor="White" 
-               FontSize="15" 
+               FontSize="18" 
                FontAttributes="Bold"
-               BackgroundColor="Gray"
                Text="Please enter your username:"/>
         
         <Grid Padding="0,0,0,50">
@@ -33,9 +32,8 @@
         </Grid>
 
         <Label TextColor="White" 
-               FontSize="15" 
+               FontSize="18" 
                FontAttributes="Bold"
-               BackgroundColor="Gray"
                Text="Please enter your password:"/>
 
         <!--This is an Entry box thingy which is used to capture user's password-->
@@ -76,7 +74,7 @@
     -Understand how you can play around with the different formatting styles for Label
     -Please remember to set 'Focused="EntryContainer_Focused"' for each entry field (box thingy) with the appropriate event handler 
        set in the .cs file. This ensures that the keyboard consistently appears when the entry box is clicked.
-    -You can change the color of anything you want. Even for 'ContentPage' and 'StackLayout'.
+    -You can change the color of anything you want. Even for 'ContentPage', 'StackLayout' and 'Label's etc
     
     ~But do note that you can specify 'Padding' and 'Margin' specifically inside any attributes (buttons, labels etc) when they are inside StackLayout
     ~To have margins between the attributes when inside StackLayout, you gotta add <Grid>

@@ -50,38 +50,38 @@ namespace TestXamarin
 
 
             //Using 'TabbedPage' -> allows the creation of tabs at the top of the page for quick navigation to other pages.
-            //MainPage = new TabbedPage
-            //{
-            //    Children =
-            //    {
-            //        //Specify the page for the first tab
-            //        new PlusPart2LabelButtonAndEntry(),
-            //        //Specify the page for the second tab...and so on
-            //        new SecondPage("Hello!")
-
-            //        //NOTE: Make sure all the pages specify to be tabs have 'Title="..."' inside them under their 'ContentPage' at the top,
-            //            //as this will be the names of the tab itself that the user will see to navigate. Ignore the 'Next' buttons for now as it will not work.
-            //    }
-            //};
-
-
-
-
-            //Using 'CarouselPage' -> allows the creation of tabs but now, you navigate them by swiping left and right. SUPER COOOOOOLLLLLL~
-            MainPage = new CarouselPage
+            MainPage = new TabbedPage
             {
                 Children =
                 {
                     //Specify the page for the first tab
                     new PlusPart2LabelButtonAndEntry(),
                     //Specify the page for the second tab...and so on
-                    new SecondPage("Hello!"),
-                    new GreetPage5(),
-                    new GreetPage7()
+                    new SecondPage("Hello!")
 
-                    //NOTE: Ignore the 'Next' buttons for now as it will not work.
+                    //NOTE: Make sure all the pages specify to be tabs have 'Title="..."' inside them under their 'ContentPage' at the top,
+                        //as this will be the names of the tab itself that the user will see to navigate. Ignore the 'Next' buttons for now as it will not work.
                 }
             };
+
+
+
+
+            //Using 'CarouselPage' -> allows the creation of tabs but now, you navigate them by swiping left and right. SUPER COOOOOOLLLLLL~
+            //MainPage = new CarouselPage
+            //{
+            //    Children =
+            //    {
+            //        //Specify the page for the first tab
+            //        new PlusPart2LabelButtonAndEntry(),
+            //        //Specify the page for the second tab...and so on
+            //        new SecondPage("Hello!"),
+            //        new GreetPage5(),
+            //        new GreetPage7()
+
+            //        //NOTE: Ignore the 'Next' buttons for now as it will not work.
+            //    }
+            //};
 
 
         }
