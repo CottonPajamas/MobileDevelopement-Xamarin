@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestXamarin.PlusPart2LabelButtonAndEntry"
+             BackgroundColor="Black"
+             Title="FirstPage">
+
+    <!--Please never forget to add this when adding anything without VerticalOptions and HorizontalOptions-->
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+            iOS="0, 20, 0, 0"
+            Android="0, 0, 0, 0">
+        </OnPlatform>
+    </ContentPage.Padding>
+
+
+    <StackLayout BackgroundColor="Black"
+                 Padding="60"
+                  VerticalOptions="Center">
+
+        <Label TextColor="White" 
+               FontSize="15" 
+               FontAttributes="Bold"
+               BackgroundColor="Gray"
+               Text="Please enter your username:"/>
+        
+        <Grid Padding="0,0,0,50">
+            <!--This is an Entry box thingy which is used to capture user's name-->
+            <Entry
+            Focused="EntryContainer_Focused"
+            BackgroundColor="LightGray"
+            x:Name="EntryContainer1"/>
+        </Grid>
+
+        <Label TextColor="White" 
+               FontSize="15" 
+               FontAttributes="Bold"
+               BackgroundColor="Gray"
+               Text="Please enter your password:"/>
+
+        <!--This is an Entry box thingy which is used to capture user's password-->
+        <Entry 
+            Focused="EntryContainer_Focused"
+            BackgroundColor="LightGray"
+            IsPassword="True"
+            Placeholder="Password"
+            x:Name="EntryContainer2"/>
+
+        <Button Clicked="Button_Clicked"
+                Text="Enter!"
+                TextColor="White"
+                BackgroundColor="Green"/>
+
+        <Label x:Name="OutputLabel"
+               TextColor="FloralWhite"
+               FontSize="60"/>
+
+
+        <Button Clicked="NextPageBtn1"
+            Text="Next"
+            BackgroundColor="AliceBlue"/>
+
+        <Button Clicked="NextPageBtn2"
+            Text="Next (with parameter being passed)"
+            BackgroundColor="AliceBlue"/>
+
+    </StackLayout>
+
+
+</ContentPage>
+
+
+
+
+<!--
+    -Understand how you can play around with the different formatting styles for Label
+    -Please remember to set 'Focused="EntryContainer_Focused"' for each entry field (box thingy) with the appropriate event handler 
+       set in the .cs file. This ensures that the keyboard consistently appears when the entry box is clicked.
+    -You can change the color of anything you want. Even for 'ContentPage' and 'StackLayout'.
+    
+    ~But do note that you can specify 'Padding' and 'Margin' specifically inside any attributes (buttons, labels etc) when they are inside StackLayout
+    ~To have margins between the attributes when inside StackLayout, you gotta add <Grid>
+    
+    -Under StackLayout, you can ...
+        ~change the color of the entire stack's background. So all the labels, buttons etc will appear on top of this color.
+        ~Padding="60" -> this will pad everything that is inside the stack with a padding of 60.
+        ~add this: VerticalOptions="Center" -> this will specify the stack to be in the center of the screen.
+    
+    
+    
+    
+    
+    
+    
+    
+    -->

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestXamarin.GreetPage3">
+
+    <!--Here we implment data binding to text value of a label-->
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="{Binding Source={x:Reference slider3},
+            Path=Value,
+            StringFormat='Value is {0:F2}' }" 
+               
+               Opacity="{Binding Source={x:Reference slider3}, Path=Value}"
+               
+               x:Name="label3"/>
+        
+        <Slider x:Name="slider3" />   
+    </StackLayout>
+</ContentPage>
+
+
+<!--Need to bind the text property of the lable and the value property of the slider
+    To do so need to use a special syntax aka xaml markup extension. eg here, replace 'Hello world' with '{Binding ...}' to let the xaml compiler know
+    that this is not a string and that it is in fact a markup extension.
+    
+    This here is the new code:      Text="{Binding Source={x:Reference slider}, Path=Value }", StringFormat='Value is {0:F2}' }"
+    Explanation:
+    -In the mark up extension, we indicate 'Binding' to indicate the type of markup extension being used here.
+    -We then need to specify a 'Source' in which the value of the label (object) will be binded to.
+    -To do so, we need another markup extension to make a reference to the slider object aka 'slider'.
+    -We still use 'x:Reference' (translate as x reference) here, in order to reference to another object in the xaml file.
+    -Also since it is prefixed with 'x', it belongs to the standard xaml that microsoft introduced in 2009. (Look at line 3)
+    -Now that the text of the label has been binded to the object, we need to specify which property of said object we are interested in.
+    -In this case we are interested in its value, thus: 'Path=Value'.
+    -'StringFormat' simply specifies the text component, if any, that you want to appear in the label alongside the value retrieved from the
+    object aka '0'.
+    
+    
+    
+    Bonus: Using another binding expression to bind the opacity property of the label to the value of the slider
+    This here is the code:      Opacity="{Binding Source={x:Reference slider3}, Path=Value}"
+    
+    -Same thing as above, the only diff being there isnt any string input cos we only want the value of the slider in order to control the
+    opacity of the text in the label.
+    
+    
+    -->

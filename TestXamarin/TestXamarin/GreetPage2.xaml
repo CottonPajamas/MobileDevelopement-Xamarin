@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestXamarin.GreetPage2">
+    
+    <!--With stacklayout you can stack multiple widgets horizontally or vertically. Very useful.-->
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <!--First version-->
+        <Label Text="Hello World" x:Name="label1"/>    <!--The x:Name here indicates a unique identifier so that the slider can identify. Think 'AS' in sql-->
+        <Slider ValueChanged="Slider_ValueChanged" x:Name="slider1"/>
+
+        <!--Second version-->
+        <Label Text="Hello World" x:Name="label2"/>
+        <Slider ValueChanged="Slider_ValueChanged_1" x:Name="slider2"/>
+    </StackLayout>
+</ContentPage> 

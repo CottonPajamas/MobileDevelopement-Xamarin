@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestXamarin.GreetPage4">
+
+    <!--Here we implment data binding to text value of a label-->
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label BindingContext="{x:Reference slider4}}"
+               
+            Text="{Binding Value,
+            StringFormat='Value is {0:F2}' }" 
+               
+               Opacity="{Binding Value}"
+               
+               x:Name="label4"/>
+        
+        <Slider x:Name="slider4" />
+    </StackLayout>
+</ContentPage>
+
+
+<!--Here we further improve our binding codes in GreetPage3 to make it more proffesional and easier to maintain.
+    
+    -Do so by first adding:     BindingContext="{x:Reference slider4}}"
+    -This will make slider4 to be the source object for any properties of the label.
+    -This helps in eliminating alot of repetitive codes.
+    -We can now remove all of these 'Source={x:Reference slider4},' cos its already established where the source is coming from.
+    -We can take this to the next level by removing 'Path=Value' and just putting 'Value' instead.
+    
+    -->

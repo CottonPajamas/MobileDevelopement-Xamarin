@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestXamarin.GreetPage7">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+            iOS="0, 20, 0, 0"
+            Android="10, 20, 0, 0">
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <!--Here we implment data binding to text value of a label-->
+    <StackLayout BindingContext="{x:Reference slider7}" HorizontalOptions="Center">
+        <!--We remove VerticalOptions here-->
+        <BoxView Color="LawnGreen" Opacity="{Binding Value}"/>
+        <Label
+            Text="{Binding Value,
+            StringFormat='Value is {0:F2}' }" 
+               
+               Opacity="{Binding Value}"/>
+
+        <Slider x:Name="slider7" />
+    </StackLayout>
+</ContentPage>
+
+
+
+<!--                         How to deal with device differences in xaml
+    We will need to use Property Element Syntax here. Also platform(s) to specify are optional. 
+    
+    -Add this '<ContentPage.Padding>' under ContentPage. This will use an xml element instead of an xml attribute
+    to set the padding property. (Explains the name lol)
+    -Inside it you can just write a simple string (totally fine) or you can add another element to represent a complex object.
+    -In this case, we want to use '<OnPlatform>' element. FYI this element maps to a C# class 
+    -Then you will need to specify what you want to change: x:TypeArguments="Thickness"
+    -Then you will need to specify the device and the corresponding Thickness value to it(no need brackets): iOS="0, 20, 0, 0">
+    -Apply this to Android as well.
+    
+    
+    -->

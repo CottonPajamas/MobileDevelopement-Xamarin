@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestXamarin.GreetPage6">
+
+    <!--Here we implment data binding to text value of a label-->
+    <StackLayout BindingContext="{x:Reference slider6}" HorizontalOptions="Center">   <!--We remove VerticalOptions here-->
+        <BoxView Color="LawnGreen" Opacity="{Binding Value}"/>
+        <Label
+            Text="{Binding Value,
+            StringFormat='Value is {0:F2}' }" 
+               
+               Opacity="{Binding Value}"/>
+
+        <Slider x:Name="slider6" />
+    </StackLayout>
+</ContentPage>
+
+
+

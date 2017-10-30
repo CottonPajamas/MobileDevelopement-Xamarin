@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestXamarin.GreetPage5">
+
+    <!--Here we implment data binding to text value of a label-->
+    <StackLayout BindingContext="{x:Reference slider5}" HorizontalOptions="Center" VerticalOptions="Center">
+        <BoxView Color="LawnGreen" Opacity="{Binding Value}"/>
+        <Label
+            Text="{Binding Value,
+            StringFormat='Value is {0:F2}' }" 
+               
+               Opacity="{Binding Value}"
+               
+               x:Name="label5"/>
+
+        <Slider x:Name="slider5" />
+    </StackLayout>
+</ContentPage>
+
+
+
+<!---We can make it even more efficient if for instance you have multiple attributes (Labels, BoxViews etc) 
+    in the StackLayout and there are all making reference to that one Slider attribute.
+    
+    -To do so, we simply move this '   BindingContext="{x:Reference slider4}"   '   to StackLayout.
+    -Hence all the attributes/elements in StackLayout will inherit this binding source reference allowing you
+    to make less repeat codes.
+    
+    
+    -->
