@@ -7,10 +7,10 @@ Enjoy~
 
 
 Update - 30102017
-->Explored the use of 'DisplayAlert'.
-->Explored the use of StackLayout to stack multiple attributes and an event for the slider.
-->Applying simple data binding.
-->Dealing with device differences in C# and xaml.
-->Explored the use of 'NavigationPage'
-->Explored the use of 'TabbedPage'
-->Explored the use of 'CarouselPage'
+-Explored the use of 'DisplayAlert'.
+-Explored the use of StackLayout to stack multiple attributes and an event for the slider.
+-Applying simple data binding.
+-Dealing with device differences in C# and xaml.
+-Explored the use of 'NavigationPage'
+-Explored the use of 'TabbedPage'
+-Explored the use of 'CarouselPage'
